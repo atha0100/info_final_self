@@ -13,6 +13,10 @@ interface MaintenanceStats {
   totalRequests: number;
 }
 
+interface CommitteeStats {
+  totalMembers: number;
+}
+
 const financeStats: FinanceStats = {
   balance: 40000,
 };
@@ -24,6 +28,10 @@ const upcomingEvent: Event = {
 
 const maintenanceStats: MaintenanceStats = {
   totalRequests: 3,
+};
+
+const committeeStats: CommitteeStats = {
+  totalMembers: 5,
 };
 
 export default function Home() {
@@ -46,7 +54,7 @@ export default function Home() {
       {/* Dashboard Grid */}
       <section className="py-12 px-4 md:px-8 lg:px-16 bg-white">
         <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             {/* Finances Card */}
             <Link
               href="/finances"
@@ -87,6 +95,20 @@ export default function Home() {
                   {maintenanceStats.totalRequests}
                 </p>
                 <div className="absolute inset-0 bg-gradient-to-b from-transparent to-yellow-50 opacity-0 group-hover:opacity-100 transition-opacity" />
+              </div>
+            </Link>
+
+            {/* Committee Card */}
+            <Link
+              href="/committee"
+              className="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-xl transition-shadow"
+            >
+              <div className="p-8 bg-gradient-to-r from-purple-50 to-purple-100">
+                <h2 className="text-2xl font-bold text-purple-800 mb-4">Committee Members</h2>
+                <p className="text-4xl font-bold text-purple-600 group-hover:text-purple-700 transition-colors">
+                  {committeeStats.totalMembers}
+                </p>
+                <div className="absolute inset-0 bg-gradient-to-b from-transparent to-purple-50 opacity-0 group-hover:opacity-100 transition-opacity" />
               </div>
             </Link>
           </div>
