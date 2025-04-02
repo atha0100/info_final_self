@@ -10,9 +10,6 @@ interface MaintenanceRequest {
   contact: string;
 }
 
-const categories = ['Plumbing', 'Electrical', 'Structural', 'Common Areas', 'Other'];
-const priorities = ['Low', 'Medium', 'High', 'Urgent'];
-
 export async function POST(request: Request) {
   try {
     const data = await request.json() as MaintenanceRequest;
