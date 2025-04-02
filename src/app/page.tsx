@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 interface FinanceStats {
@@ -54,7 +55,7 @@ export default function Home() {
       {/* Dashboard Grid */}
       <section className="py-12 px-4 md:px-8 lg:px-16 bg-white">
         <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
             {/* Finances Card */}
             <Link
               href="/finances"
@@ -109,6 +110,24 @@ export default function Home() {
                   {committeeStats.totalMembers}
                 </p>
                 <div className="absolute inset-0 bg-gradient-to-b from-transparent to-purple-50 opacity-0 group-hover:opacity-100 transition-opacity" />
+              </div>
+            </Link>
+
+            {/* Documents Card */}
+            <Link
+              href="/documents"
+              className="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-xl transition-shadow"
+            >
+              <div className="p-8 bg-gradient-to-r from-gray-50 to-gray-100">
+                <div className="flex flex-col items-center justify-center h-full">
+                  <div className="bg-gray-200 rounded-full p-4 mb-4">
+                    <svg className="w-8 h-8 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                    </svg>
+                  </div>
+                  <h2 className="text-2xl font-bold text-gray-800">Documents</h2>
+                </div>
+                <div className="absolute inset-0 bg-gradient-to-b from-transparent to-gray-50 opacity-0 group-hover:opacity-100 transition-opacity" />
               </div>
             </Link>
           </div>
