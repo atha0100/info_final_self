@@ -22,8 +22,8 @@ export default function RootLayout({
           {/* Background Image */}
           <div className="absolute inset-0 z-0">
             <Image
-              src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750"
-              alt="Modern building"
+              src="https://images.app.goo.gl/NLHyhww7dKhvCtFfA"
+              alt="Modern building complex"
               fill
               className="object-cover opacity-20"
               priority
