@@ -7,7 +7,7 @@ export default function ContactPage() {
             Contact Us
           </h2>
           <p className="text-xl text-gray-600 mb-8">
-            Have questions? We'd love to help!
+            Have questions? We&apos;d love to help!
           </p>
         </div>
 
