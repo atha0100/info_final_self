@@ -22,7 +22,7 @@ export default function RootLayout({
           {/* Background Image */}
           <div className="absolute inset-0 z-0">
             <Image
-              src="https://images.app.goo.gl/NLHyhww7dKhvCtFfA"
+              src="https://images.unsplash.com/photo-1518791841217-8f162f1e1131?auto=format&fit=crop&w=1920&q=80"
               alt="Modern building complex"
               fill
               className="object-cover opacity-20"
