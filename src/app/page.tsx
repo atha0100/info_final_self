@@ -3,6 +3,8 @@ import Image from "next/image";
 
 interface FinanceStats {
   balance: number;
+  totalIncome: number;
+  totalExpenses: number;
 }
 
 interface Event {
@@ -12,36 +14,56 @@ interface Event {
 
 interface MaintenanceStats {
   totalRequests: number;
+  pending: number;
+  completed: number;
 }
 
 interface CommitteeStats {
   totalMembers: number;
+  activeMembers: number;
+  meetingsThisMonth: number;
 }
 
 const financeStats: FinanceStats = {
-  balance: 40000,
+  balance: 150000,
+  totalIncome: 25000,
+  totalExpenses: 10000,
 };
 
 const upcomingEvent: Event = {
-  title: "Annual General Meeting",
-  date: "April 15, 2025",
+  title: "Community BBQ",
+  date: "April 15, 2024",
 };
 
 const maintenanceStats: MaintenanceStats = {
-  totalRequests: 3,
+  totalRequests: 12,
+  pending: 4,
+  completed: 8,
 };
 
 const committeeStats: CommitteeStats = {
-  totalMembers: 5,
+  totalMembers: 15,
+  activeMembers: 12,
+  meetingsThisMonth: 2,
 };
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
+    <main className="relative min-h-screen">
       {/* Hero Section */}
       <section className="relative py-20 px-4 md:px-8 lg:px-16">
         <div className="max-w-6xl mx-auto">
           <div className="text-center relative z-10">
+            <div className="mb-12">
+              <Image
+                src="/images/building.jpg"
+                alt="Building management"
+                width={800}
+                height={400}
+                className="rounded-lg shadow-lg object-cover"
+                priority
+              />
+            </div>
             <h1 className="text-4xl md:text-6xl font-bold text-gray-800 mb-6">
               Palmview Estate Management Dashboard
             </h1>
