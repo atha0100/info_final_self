@@ -1,6 +1,7 @@
 'use client';
 
 import Link from "next/link";
+import HomeButton from '../components/HomeButton';
 
 interface Event {
   id: number;
@@ -91,17 +92,13 @@ const sampleAgenda: AgendaItem[] = [
 export default function EventsPage() {
   return (
     <main className="min-h-screen bg-gray-50">
+      <HomeButton />
+      
       {/* Header */}
       <section className="py-8 px-4 md:px-8">
         <div className="max-w-6xl mx-auto">
           <div className="flex items-center justify-between">
             <h1 className="text-3xl font-bold text-gray-800">Events & Meetings</h1>
-            <Link
-              href="/events/create"
-              className="inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors"
-            >
-              Create Event
-            </Link>
           </div>
         </div>
       </section>
@@ -177,12 +174,6 @@ export default function EventsPage() {
                     </svg>
                     {event.attendees} expected attendees
                   </div>
-                  <Link
-                    href={`/events/${event.id}`}
-                    className="ml-auto inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors text-sm"
-                  >
-                    View Details
-                  </Link>
                 </div>
               </div>
             ))}

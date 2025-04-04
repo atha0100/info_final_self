@@ -1,6 +1,7 @@
 'use client';
 
 import Link from "next/link";
+import HomeButton from '../components/HomeButton';
 
 interface CommitteeMember {
   id: number;
@@ -88,12 +89,7 @@ export default function CommitteePage() {
         <div className="max-w-6xl mx-auto">
           <div className="flex items-center justify-between">
             <h1 className="text-3xl font-bold text-gray-800">Committee Members</h1>
-            <Link
-              href="/committee/elections"
-              className="inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors"
-            >
-              View Elections
-            </Link>
+            <HomeButton />
           </div>
         </div>
       </section>

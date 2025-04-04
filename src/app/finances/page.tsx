@@ -1,6 +1,7 @@
 'use client';
 
 import Link from "next/link";
+import HomeButton from '../components/HomeButton';
 
 interface Transaction {
   id: number;
@@ -89,20 +90,16 @@ const financialStats = {
   annualBudget: 150000,
 };
 
-export default function FinancePage() {
+export default function FinancesPage() {
   return (
     <main className="min-h-screen bg-gray-50">
+      <HomeButton />
+      
       {/* Header */}
-      <section className="py-8 px-4 md:px-8">
+      <section className="py-12 px-4 md:px-8">
         <div className="max-w-6xl mx-auto">
           <div className="flex items-center justify-between">
             <h1 className="text-3xl font-bold text-gray-800">Financial Overview</h1>
-            <Link
-              href="/finances/reports"
-              className="inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors"
-            >
-              Generate Report
-            </Link>
           </div>
         </div>
       </section>

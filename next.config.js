@@ -3,11 +3,12 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   images: {
-    domains: ['images.unsplash.com'], // Using Unsplash as a reliable image source
+    unoptimized: true,
+    domains: ['localhost'],
     remotePatterns: [
       {
-        protocol: 'https',
-        hostname: 'images.unsplash.com',
+        protocol: 'http',
+        hostname: 'localhost',
         pathname: '/**',
       },
     ],

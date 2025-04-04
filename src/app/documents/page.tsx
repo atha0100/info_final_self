@@ -1,6 +1,7 @@
 'use client';
 
 import Link from "next/link";
+import HomeButton from '../components/HomeButton';
 
 interface Document {
   id: number;
@@ -126,17 +127,11 @@ const documentStats = {
 export default function DocumentsPage() {
   return (
     <main className="min-h-screen bg-gray-50">
-      {/* Header */}
-      <section className="py-8 px-4 md:px-8">
+      <section className="py-12 px-4 md:px-8">
         <div className="max-w-6xl mx-auto">
           <div className="flex items-center justify-between">
             <h1 className="text-3xl font-bold text-gray-800">Documents</h1>
-            <Link
-              href="/documents/upload"
-              className="inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors"
-            >
-              Upload Document
-            </Link>
+            <HomeButton />
           </div>
         </div>
       </section>
@@ -228,14 +223,6 @@ export default function DocumentsPage() {
                   </div>
                 </div>
                 <p className="text-gray-600 mb-4">{doc.description}</p>
-                <div className="flex justify-end">
-                  <a
-                    href="#"
-                    className="inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors text-sm"
-                  >
-                    Download
-                  </a>
-                </div>
               </div>
             ))}
           </div>

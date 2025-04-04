@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 interface FinanceStats {
   balance: number;
@@ -38,11 +39,11 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
       {/* Hero Section */}
-      <section className="py-20 px-4 md:px-8 lg:px-16">
+      <section className="relative py-20 px-4 md:px-8 lg:px-16">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center">
+          <div className="text-center relative z-10">
             <h1 className="text-4xl md:text-6xl font-bold text-gray-800 mb-6">
-              Strata Management Dashboard
+              Palmview Estate Management Dashboard
             </h1>
             <p className="text-xl text-gray-600 mb-12">
               Your one-stop solution for property management and community engagement
@@ -137,7 +138,7 @@ export default function Home() {
       <section className="py-20 px-4 md:px-8 lg:px-16 bg-white/90">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl font-bold text-gray-800 mb-12 text-center">
-            Why Choose Our Strata Management Solution?
+            Why Choose Palmview Estate Management Solution?
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Feature 1 */}
