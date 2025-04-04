@@ -54,22 +54,14 @@ export default function Home() {
       <section className="relative py-20 px-4 md:px-8 lg:px-16">
         <div className="max-w-6xl mx-auto">
           <div className="text-center relative z-10">
-            <div className="mb-12">
-              <Image
-                src="/images/building.jpg"
-                alt="Building management"
-                width={800}
-                height={400}
-                className="rounded-lg shadow-lg object-cover"
-                priority
-              />
+            <div className="bg-white/90 p-8 rounded-lg shadow-lg">
+              <h1 className="text-4xl md:text-6xl font-bold text-gray-800 mb-6">
+                Palmview Estate Management Dashboard
+              </h1>
+              <p className="text-xl text-gray-600 mb-12">
+                Your one-stop solution for property management and community engagement
+              </p>
             </div>
-            <h1 className="text-4xl md:text-6xl font-bold text-gray-800 mb-6">
-              Palmview Estate Management Dashboard
-            </h1>
-            <p className="text-xl text-gray-600 mb-12">
-              Your one-stop solution for property management and community engagement
-            </p>
           </div>
         </div>
       </section>
